@@ -1,0 +1,1075 @@
+/* --------------------------Global-------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "JetBrains Mono", monospace;
+    scroll-behavior: smooth;
+}
+
+/* --------------------------Header-------------------------- */
+header {
+    position: relative;
+    min-height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* --------------------------Body-------------------------- */
+body {
+    background: linear-gradient(to bottom right, #0f0e28 46%, #050d0e 89%)
+}
+
+
+/* --------------------------Navbar-------------------------- */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background-color: #000000;
+    margin: 0 8rem;
+}
+
+.name-logo {
+    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.navlist {
+    gap: 1.8rem;
+    display: flex;
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+.navlist a {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.navlist a:hover {
+    color: #92a8ce;
+}
+
+.navlist a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #92a8ce;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navlist a:hover::before {
+    transform: scaleX(1);
+}
+
+/* --------------------------main viewport row-------------------------- */
+.row {
+    /* background-color: radial-gradient(
+    125% 125% at 50% 0%,
+    rgb(2, 6, 23) 50%,
+    rgb(19, 255, 170)
+  ); */
+    /* background-image: linear-gradient( /*using this one
+  to bottom right,
+  rgb(140 140 140 / 98%),
+  rgb(0 0 0));*/
+    /*min-height: 91vh;*/
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.row .left-content {
+    /* border: 2px solid white; */
+}
+
+.left-content img {
+    width: 30rem;
+    /* width: 25vw; */
+    object-fit: fill;
+    margin-top: 1rem;
+}
+
+.row .right-content {
+    /* border: 2px solid palegoldenrod; */
+    max-width: 40%;
+    min-height: 41rem;
+    /* min-height: 65.6vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.right-content .name {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+.right-content span {
+    font-size: 5rem;
+    /* margin-bottom: 1rem; */
+}
+
+.right-content p {
+    font-size: 1.5rem;
+    /* margin-top: 0.7rem; */
+}
+
+.important {
+    color: rgb(103, 233, 77);
+}
+
+.buttons {
+    width: 100%;
+    min-height: 8rem;
+    /*min height not working here*/
+    display: flex;
+    /* gap: 2rem; */
+    flex-direction: row;
+    position: relative;
+    top: 0rem;
+    /* left: -20rem; */
+    right: 2rem;
+}
+
+.btn-1 {
+    /* position: absolute; */
+    top: 32rem;
+    margin: 4rem 3rem 2rem auto;
+    padding: 0.5em;
+    cursor: pointer;
+    background: linear-gradient(90deg,
+            rgba(42, 123, 155, 1) 0%,
+            rgba(87, 199, 133, 1) 50%,
+            rgba(237, 221, 83, 1) 100%);
+    font-size: 1.3rem;
+    left: 53rem;
+    border: none;
+    border-radius: 0.8rem;
+}
+
+.btn-1 a {
+    color: black;
+    text-decoration: none;
+}
+
+.btn-1:hover {
+    transform: scale(1.1);
+}
+
+.btn-2 {
+    /* position: absolute; */
+    top: 32rem;
+    margin: 4rem auto 2rem 0;
+    padding: 0.5em;
+    cursor: pointer;
+    background: transparent;
+    /* background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%); */
+    font-size: 1.3rem;
+    left: 65rem;
+    /* border: 1px solid white; */
+    border-radius: 0.8rem;
+    color: white;
+}
+
+.btn-2 a {
+    color: white;
+    text-decoration: none;
+    border: none;
+}
+
+.btn-2:hover {
+    transform: scale(1.1);
+}
+
+.right-content .social {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+    max-width: 15rem;
+    /* max-width: 13.333vw; */
+    position: relative;
+    top: 0rem;
+    left: 10rem;
+    /* margin-bottom: -13rem;*/
+    opacity: 0.7;
+}
+
+.social .icon-box {
+    background-color: white;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.social .icon-box i {
+    font-size: 24px;
+    color: #444;
+}
+
+.social .icon-box:hover {
+    transform: translateY(-5px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------About me section-------------------------- */
+.aboutme {
+    /* use this one the bottom one */
+    /* background: radial-gradient(circle, rgb(144 144 144) -14%, rgb(0 0 0) 83%);  */
+    /* min-height: 46rem; */
+    min-height: 73.6vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.aboutmeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 49rem;
+    /* max-width: 40.833vw; */
+    /* margin: 2rem; */
+    padding: 0.5rem;
+}
+
+.aboutmeContainer .myjourney {
+    display: block;
+    background-image: linear-gradient(to bottom right, #2cff00 0%, #0040ff 100%);
+    border-radius: 84px;
+    padding: 0.5em;
+    border: 1px solid white;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.aboutmeContainer h1 {
+    font-size: 3rem;
+    /* margin-bottom: 2rem; */
+}
+
+.aboutmeContainer .line1 {
+    width: 8rem;
+    /* max-width is not working only width is working*/
+    /*max-width is not working here why*/
+    background: linear-gradient(90deg,
+            rgba(0, 255, 0, 1) 0%,
+            rgba(0, 255, 187, 1) 50%,
+            rgba(0, 8, 242, 1) 100%);
+    /* border: 2px solid red; */
+    min-height: 0.5rem;
+    /* min-height: 0.8vh; */
+    margin-bottom: 1.5rem;
+}
+
+.box1 {
+    border: transparent;
+    background: transparent;
+    box-shadow: 2px 4px 11px 5px #9898984f;
+}
+
+.box1 p {
+    font-size: 1.3rem;
+    margin: 1rem;
+}
+
+.box1 hr {
+    /* max-width: 95%; */
+    max-width: 49.479vw;
+    color: red;
+    margin: 1rem;
+}
+
+.box1details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    text-align: left;
+    margin-left: 4rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+
+
+/* --------------------------My recent work-------------------------- */
+.recentwork {
+    /* use just the bottom one */
+    /* background: linear-gradient(90deg,rgba(179, 179, 179, 1) 0%, rgba(30, 36, 30, 1) 50%, rgba(179, 179, 179, 1) 100%); */
+    /* background: linear-gradient(to right, rgb(144 144 144) -14%, rgb(0 0 0) 83%); */
+    /* background-image: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%); */
+    /* background: radial-gradient(circle,rgba(13, 1, 1, 1) 0%, rgba(122, 122, 122, 1) 42%, rgba(79, 79, 79, 1) 76%, rgba(0, 0, 0, 1) 100%); */
+    /* background: radial-gradient(circle,rgba(186, 156, 156, 1) 0%, rgba(184, 167, 178, 1) 37%, rgba(115, 115, 115, 1) 64%, rgba(0, 0, 0, 1) 100%); */
+    /* min-height: 46rem; */
+    min-height: 73.6vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.recentworkcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 49rem;
+    /* max-width: 40.833vw; */
+    /* margin: 2rem; */
+    padding: 0.5rem;
+}
+
+.myrecentwork {
+    display: block;
+    background-image: linear-gradient(to bottom right, #2cff00 0%, #0040ff 100%);
+    border-radius: 84px;
+    padding: 0.5em;
+    border: 1px solid white;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.recentworkcontainer h1 {
+    font-size: 3rem;
+    /* margin-bottom: 2rem; */
+}
+
+.recentworkcontainer .line1 {
+    width: 8rem;
+    /* width: 6.667vw; */
+    /* max-width is not working only width is working*/
+    /*max-width is not working here why*/
+    background: linear-gradient(90deg,
+            rgba(0, 255, 0, 1) 0%,
+            rgba(0, 255, 187, 1) 50%,
+            rgba(0, 8, 242, 1) 100%);
+    /* border: 2px solid red; */
+    min-height: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.recentworkcontainer .container {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2rem;
+    /* border: 4px solid hotpink; */
+    width: 1459px;
+    /* width: 75.99vw; */
+    min-height: 25rem;
+    /* min-height: 40vh; */
+    margin: 1rem 5rem;
+    justify-items: center;
+}
+
+.container .card {
+    /* border: 3px solid blue; */
+    overflow: hidden;
+    display: flex;
+    max-width: 79%;
+    /* max-width: 41.146vw; */
+    min-height: 24rem;
+    /* min-height: 38.4vh; */
+    flex-direction: column;
+    border-radius: 12px;
+    background-color: black;
+}
+
+.card:hover {
+    /* box-shadow: 2px 4px 11px 5px #9898984f; */
+    box-shadow: 0px 2px 10px 1px rgb(95 120 221 / 80%);
+
+    .img {
+        /* transform: scale(1.1);  */
+        transform: scale(1.15);
+        /* overflow: hidden;  */
+        /* transition: cubic-bezier(0.165, 0.84, 0.44, 1); */
+    }
+}
+
+.card .img {
+    /* border: 2px solid green; */
+    width: 100%;
+    min-height: 12rem;
+    /* min-height: 19.2vh; */
+    border-radius: 12px 12px 0 0;
+}
+
+.img img {
+    max-width: 100%;
+    min-height: 100%;
+    border-radius: 12px 12px 0 0;
+}
+
+.card .details {
+    /* border: 2px solid paleturquoise; */
+    width: 100%;
+    min-height: 13rem;
+    /* min-height: 20.8vh; */
+    text-align: left;
+    border-radius: 0 0 12px 12px;
+}
+
+.details h2 {
+    font-size: 1.5rem;
+    color: cornflowerblue;
+    margin: 0.5rem;
+}
+
+.details p {
+    margin: 0.4rem;
+}
+
+.details .projectdetails {
+    display: flex;
+    margin-bottom: 0.5rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.projectdetails span {
+    font-size: 0.8rem;
+}
+
+.projectdetails .highlight {
+    background-color: #2cff00;
+    padding: 0.2rem;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+.projectdetails .important {
+    background-color: red;
+    padding: 0.2rem;
+    border-radius: 5px;
+    font-weight: bolder;
+    color: white;
+}
+
+.details .tools {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    margin-left: 1rem;
+}
+
+.tools div {
+    text-align: center;
+    /* display: block; */
+    background-color: grey;
+    border-radius: 84px;
+    padding: 0.5em;
+    border: 1px solid white;
+    font-size: 0.8rem;
+    width: 3rem;
+    /* width: 2.5vw; */
+}
+
+.details hr {
+    margin: 1rem;
+}
+
+.details .git {
+    border: 2px solid white;
+    margin: 1rem 7rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 1rem;
+    background-color: #4e4e4e;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.git:hover {
+    background-color: #646363;
+    color: ;
+}
+
+/* --------------------------Technologies and experties-------------------------- */
+.techskills {
+    min-height: 46rem;
+    /* min-height: 73.6vh; */
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.techskillscontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 49rem;
+    /* max-width: 40.833vw; */
+    /* margin: 2rem; */
+    padding: 0.5rem;
+}
+
+.myskills {
+    display: block;
+    background-image: linear-gradient(to bottom right, #2cff00 0%, #0040ff 100%);
+    border-radius: 84px;
+    padding: 0.5em;
+    border: 1px solid white;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.techskillscontainer h1 {
+    font-size: 3rem;
+    /* margin-bottom: 2rem; */
+}
+
+.techskillscontainer .line1 {
+    width: 8rem;
+    /* width: 6.667vw; */
+    /* max-width is not working only width is working*/
+    /*max-width is not working here why*/
+    background: linear-gradient(90deg,
+            rgba(0, 255, 0, 1) 0%,
+            rgba(0, 255, 187, 1) 50%,
+            rgba(0, 8, 242, 1) 100%);
+    /* border: 2px solid red; */
+    min-height: 0.5rem;
+    /* min-height: 0.8vh; */
+    margin-bottom: 1.5rem;
+}
+
+.techskillscontainer .container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    /* border: 4px solid hotpink; */
+    width: 1459px;
+    /* width: 75.99vw; */
+    min-height: 25rem;
+    /* min-height: 40vh; */
+    margin: 1rem 5rem;
+    justify-items: center;
+}
+
+.techskillscontainer .skillcard {
+    left: 3rem;
+    /* position: absolute; */
+    border: 0.5px solid #9c9ca8;
+    overflow: hidden;
+    display: flex;
+    width: 87%;
+    min-height: 24rem;
+    /* min-height: 42.67vh; */
+    flex-direction: column;
+    border-radius: 12px;
+    background-color: #151026;
+    padding: 2rem;
+
+}
+
+.skillcard:hover {
+    border: 1.5px solid #aeaef6;
+    box-shadow: inset 0px 2px 15px rgb(68 114 133 / 80%);
+
+    .circle {
+        background-color: #a9a9a9;
+    }
+}
+
+.skillcard h2 {
+    margin-bottom: 1.5rem;
+}
+
+.skillcard .grid {
+    max-width: 100%;
+    /* border: 2px solid white; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.grid .circle {
+    max-width: 5rem;
+    /* max-width: 5.56vw; */
+    min-height: 5rem;
+    /* min-height: 8.89vh; */
+    border-radius: 50%;
+    background-color: #717171;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: #21e221;
+}
+
+.grid .tool .toolname {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+/* --------------------------lets work together------------------------- */
+.clientform {
+    min-height: 46rem;
+    /* min-height: 73.6vh; */
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.clientformcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 49rem;
+    /* max-width: 40.833vw; */
+    /* margin: 2rem; */
+    padding: 0.5rem;
+}
+
+.connect {
+    display: block;
+    background-image: linear-gradient(to bottom right, #2cff00 0%, #0040ff 100%);
+    border-radius: 84px;
+    padding: 0.5em;
+    border: 1px solid white;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.clientformcontainer h1 {
+    font-size: 3rem;
+    /* margin-bottom: 2rem; */
+}
+
+.clientformcontainer .line1 {
+    width: 8rem;
+    /* width: 6.667vw; */
+    /* max-width is not working only width is working*/
+    /*max-width is not working here why*/
+    background: linear-gradient(90deg,
+            rgba(0, 255, 0, 1) 0%,
+            rgba(0, 255, 187, 1) 50%,
+            rgba(0, 8, 242, 1) 100%);
+    /* border: 2px solid red; */
+    min-height: 0.5rem;
+    /* min-height: 0.8vh; */
+    margin-bottom: 1.5rem;
+}
+
+.clientformcontainer .container {
+    position: relative;
+    display: flex;
+    /* border: 4px solid hotpink; */
+    width: 1459px;
+    /* width: 75.99vw; */
+    min-height: 25rem;
+    /* min-height: 40vh; */
+    margin: 1rem 5rem;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.container .mydetails {
+    background-color: #192929;
+    border: 1px solid #505c5c;
+    width: 45%;
+    /*max-width not working here*/
+    margin-right: 2rem;
+    height: 19rem;
+    /* height: 38vh; */
+    border-radius: 10px;
+}
+
+.mydetails h2 {
+    text-align: left;
+    margin: 2rem;
+
+}
+
+.mydetails .detailslist {
+    display: flex;
+    margin-left: 2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+
+.detailslist .box {
+    margin-right: 1rem;
+}
+
+.detailslist .email {
+    text-align: left;
+}
+
+.email p:first-child {
+    color: gray;
+}
+
+.email p:nth-child(2) {
+    cursor: pointer;
+}
+
+.email p:nth-child(2):hover {
+    color: #8f8fde;
+}
+
+.container .clientform {
+    background-color: #192929;
+    border: 1px solid #505c5c;
+    /* border: 2px solid greenyellow; */
+    width: 45%;
+    /*max-width not working here*/
+    display: block;
+    border-radius: 10px;
+    min-height: 40rem;
+    /* min-height: 83.3vh; */
+}
+
+.clientform h2 {
+    text-align: left;
+    margin: 2rem;
+}
+
+.clientform form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    align-items: flex-start;
+}
+
+.clientform label {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+input[type=text] {
+    min-height: 2.5rem;
+    /* min-height: 4vh; */
+    width: 35rem;
+    /* width: 29.167vw; */
+    background-color: #505c5c;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+input::placeholder {
+    color: whitesmoke;
+    font-size: 1rem;
+}
+
+form .message {
+    min-height: 7rem;
+    max-width: 35rem;
+    min-width: 35rem;
+    background-color: #505c5c;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.message::placeholder {
+    color: whitesmoke;
+    font-size: 1rem;
+}
+
+.send {
+    width: 35rem;
+    /* width: 30vw; */
+    position: absolute;
+    top: 32rem;
+    margin: 4rem 3rem 2rem auto;
+    padding: 0.5em;
+    cursor: pointer;
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    font-size: 1.3rem;
+    left: 48rem;
+    border: none;
+    border-radius: 0.8rem;
+    font-weight: bold;
+}
+
+.send:hover {
+    transform: scale(1.01);
+}
+
+/* --------------------------Footer------------------------- */
+.footer {
+    /* border: 2px solid burlywood; */
+    background-color: black;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    flex-basis: 50%;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.email-query {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+    text-align: center;
+}
+.email-query span a{
+    color: white;
+    text-decoration: none;
+}
+.email-query span a:hover{  
+    color: rgb(219, 215, 215);
+}
+
+
+.quick-lists {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.quick-links div {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.quick-lists a {
+    list-style: none;
+    color: white;
+    text-decoration: none;
+}
+
+.quick-lists a:hover {
+    text-decoration: underline;
+}
+
+.follow div {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.follow-lists li {
+    list-style: none;
+}
+
+.follow-lists a {
+    list-style: none;
+    color: white;
+    text-decoration: none;
+}
+
+.follow-lists a:hover {
+    text-decoration: underline;
+}
+
+.address div {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.footer hr {
+    margin-bottom: 1rem;
+    max-width: 95%;
+    /* max-width: 97.479vw; */
+    /* color: red; */
+    margin: 1rem;
+}
+
+
+.copyright {
+    color: white;
+    font-size: 1rem;
+    font-family: "JetBrains Mono", monospace;
+    opacity: 0.7;
+    margin-left: 36rem;
+    margin-bottom: 0.5rem;
+}
+
+
+
+
+
+
+
+ 
+
+@media screen and (max-width: 768px) {
+    * {
+        overflow-x: hidden;
+    }
+
+    body {
+        background: #0f0e28;
+        /* keep background consistent */
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .navlist {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .left-content img {
+        width: 90vw;
+    }
+
+    .right-content {
+        max-width: 90vw;
+        align-items: center;
+        text-align: center;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        right: 0;
+    }
+
+    .btn-1,
+    .btn-2 {
+        margin: 1rem auto;
+        width: 80vw;
+    }
+
+    .right-content .social {
+        left: 0;
+        justify-content: center;
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .aboutmeContainer,
+    .recentworkcontainer,
+    .techskillscontainer,
+    .clientformcontainer {
+        max-width: 90vw;
+    }
+
+    .aboutmeContainer .line1,
+    .recentworkcontainer .line1,
+    .techskillscontainer .line1,
+    .clientformcontainer .line1 {
+        width: 40vw;
+    }
+
+    .box1details {
+        grid-template-columns: 1fr;
+        margin-left: 0;
+    }
+
+    .recentworkcontainer .container,
+    .techskillscontainer .container {
+        grid-template-columns: 1fr;
+        width: 90vw;
+        margin: 0;
+    }
+
+    .details .tools div {
+        width: auto;
+        padding: 0.5rem 1rem;
+    }
+
+    .clientformcontainer .container {
+        flex-direction: column;
+        align-items: center;
+        width: 90vw;
+        padding: 1rem;
+    }
+
+    .container .mydetails,
+    .container .clientform {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    input[type="text"],
+    .message,
+    .send {
+        width: 80vw;
+        max-width: 100%;
+    }
+
+    .send {
+        position: static;
+        margin: 2rem auto;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quick-lists li,
+    .follow-lists li {
+        text-align: center;
+    }
+}
