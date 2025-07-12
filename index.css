@@ -28,10 +28,14 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     color: white;
     background-color: #000000;
-    margin: 0 8rem;
+    margin: 0 0rem;
+}
+
+.navbar .hamburger {
+    display: none;
 }
 
 .name-logo {
@@ -861,11 +865,13 @@ form .message {
     line-height: 1.8;
     text-align: center;
 }
-.email-query span a{
+
+.email-query span a {
     color: white;
     text-decoration: none;
 }
-.email-query span a:hover{  
+
+.email-query span a:hover {
     color: rgb(219, 215, 215);
 }
 
@@ -942,7 +948,7 @@ form .message {
 
 
 
- 
+
 
 @media screen and (max-width: 768px) {
     * {
@@ -960,10 +966,22 @@ form .message {
         padding: 1rem;
     }
 
+    .name-logo {
+        margin: auto;
+    }
+
     .navlist {
         flex-direction: column;
         gap: 1rem;
         margin-top: 1rem;
+        display: none;
+    }
+
+    .navbar .hamburger {
+        display: block; 
+        position: absolute;
+        top: 2rem;
+        left: 30rem;
     }
 
     .row {
