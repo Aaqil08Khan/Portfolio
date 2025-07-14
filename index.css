@@ -942,8 +942,32 @@ form .message {
     margin-bottom: 0.5rem;
 }
 
+ 
 
 
+@media screen and (max-width: 1468px) {
+    *{
+        overflow-x: hidden;
+    }
+    .row{
+        display: flex;
+        margin: auto;
+    }
+    .navbar {
+        align-items: flex-start;
+        padding: 1rem;
+        width: 100vw;
+        display: flex;
+
+    }
+
+}
+
+@media screen and (max-width: 1078px) {
+    .right-content{
+        display: block;
+    }
+}
 
 
 
@@ -985,26 +1009,45 @@ form .message {
     }
 
     .row {
-        /* flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        padding: 1rem; */
+        padding: 0rem; 
+        display: block;
+        justify-content: center;
     }
 
+
     .left-content img {
-        width: 90vw;
+        width: 110vw;
+        align-self: center;
+        display: block;
+        margin: auto;
     }
 
     .right-content {
-        max-width: 90vw;
+        max-width: 20vw;
         align-items: center;
         text-align: center;
     }
-
+    .right-content .name {
+    font-size: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+    margin-left: 2rem;
+}
+    .right-content span{
+        font-size: 2rem;
+    }
+    .right-content p {
+        font-size: 1rem;
+        /* margin-top: 0.7rem; */
+    }   
     .buttons {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         gap: 1rem;
         right: 0;
+        display: inline-block;
     }
 
     .btn-1,
@@ -1014,10 +1057,14 @@ form .message {
     }
 
     .right-content .social {
+        display: flex;
         left: 0;
-        justify-content: center;
-        max-width: 100%;
+        justify-content: center; 
         flex-wrap: wrap;
+    }
+    .social .icon-box{
+        width: 1rem;
+        height: 1rem;
     }
 
     .aboutmeContainer,
