@@ -20,16 +20,22 @@
   <body>
     <header>
       <nav class="navbar">
-        <input type="checkbox" id="check">
-        <label class="checkbtn"><img src="hamburger.svg" alt=""></label>
+        <!-- Hidden checkbox to control menu -->
+    <input type="checkbox" id="toggle" />
+
+    <!-- Hamburger icon -->
+    <label for="toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
         <span class="name-logo">&lt;/Aaqil&gt;</span>
         <ul class="navlist"> 
-          <a href="#aboutme">About</a>
-          <a href="#recentwork">Project</a>
-          <a href="#techskills">Skills</a>
-          <a href="#clientform">Contact</a>
+          <li><a href="#aboutme">About</a></li>
+          <li><a href="#recentwork">Project</a></li>
+          <li><a href="#techskills">Skills</a></li>
+          <li><a href="#clientform">Contact</a></li>
         </ul>
-        <!-- <div class="hamburger"><img src="hamburger.svg" alt=""></div> -->
       </nav>
       <!--------------------------------- main viewport row------------------------------ -->
       <div class="row">
