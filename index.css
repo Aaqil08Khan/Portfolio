@@ -34,26 +34,27 @@ body {
     margin: 0 0rem;
     padding: 10px 20px;
 }
- /* Hamburger Menu */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
 
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background: white;
-            margin: 3px 0;
-            transition: 0.3s;
-        }
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
 
-        #toggle {
-            display: none;
-        }
- 
- 
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+#toggle {
+    display: none;
+}
+
+
 
 .name-logo {
     font-size: 2.5rem;
@@ -63,7 +64,7 @@ body {
 
 .navbar .navlist {
     gap: 1.8rem;
-    display: flex; 
+    display: flex;
     list-style: none;
     font-size: 1.3rem;
     float: right;
@@ -122,7 +123,7 @@ body {
 }
 
 .row .left-content {
-    /* border: 2px solid white; */
+    border: 2px solid white;
 }
 
 .left-content img {
@@ -133,7 +134,7 @@ body {
 }
 
 .row .right-content {
-    /* border: 2px solid palegoldenrod; */
+    border: 2px solid palegoldenrod;
     max-width: 40%;
     min-height: 41rem;
     /* min-height: 65.6vh; */
@@ -153,9 +154,11 @@ body {
 .right-content span {
     font-size: 5rem;
     /* margin-bottom: 1rem; */
+    /* margin: auto; */
 }
 
-.right-content p {
+
+.right-content .intro {
     font-size: 1.5rem;
     /* margin-top: 0.7rem; */
 }
@@ -234,11 +237,12 @@ body {
     gap: 1rem;
     max-width: 15rem;
     /* max-width: 13.333vw; */
-    position: relative;
+    /* position: relative; */
     top: 0rem;
     left: 10rem;
-    /* margin-bottom: -13rem;*/
+    /* margin-bottom: -13rem; */
     opacity: 0.7;
+    margin: auto;
 }
 
 .social .icon-box {
@@ -967,70 +971,10 @@ form .message {
 }
 
 
-
-
-@media screen and (max-width: 1468px) {
-    * {
-        overflow-x: hidden;
-    }
-
-    .row {
-        display: flex;
-        margin: auto;
-    }
-
-    .navbar {
-        align-items: flex-start;
-        padding: 1rem;
-        width: 100vw;
-        display: flex;
-
-    }
-
-}
-
-@media screen and (max-width: 1085px) {
-    .right-content {
-        display: block;
-        margin: auto;
-    }
-}
-
-
-
-
-
-
 @media screen and (max-width: 768px) {
-    /* tutorial code start */
-    .checkbtn{
-        display: block;
-    }
-    ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background:#777d77;
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        transition: all 05s;
-    }
-    nav ul a {
-        display: block;
-        font-size: 20px;
-        margin: 50px 0;
-    }
-    a:hover,a:active{
-        background: none;
-        color: red;
-    }
-    #check:checked ~ ul{
-        left: 0;
-    }
-    /* tutorial code end */
+
     * {
-        overflow-x: hidden;
+        overflow-x: hidden
     }
 
     header {
@@ -1044,14 +988,16 @@ form .message {
     }
 
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
         padding: 1rem;
+        display: flex;
     }
 
     .name-logo {
         font-size: 30px;
-        padding-left: 50px;
+        /* padding-left: 190px; */
+        margin: auto;
     }
 
     .navlist {
@@ -1060,33 +1006,35 @@ form .message {
         margin-top: 1rem;
         display: none;
     }
-    
-  .hamburger {
-                display: flex;
-            }
 
-            .navlist {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 70px);
-                background: rgba(0, 0, 0, 0.95);
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-                padding-top: 2rem;
-                transition: left 0.3s ease;
-            }
+    .hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-            #toggle:checked ~ .navlist {
-                left: 0;
-            }
+    .navlist {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 2rem;
+        transition: left 0.3s ease;
+    }
 
-            .navlist a {
-                font-size: 1.2rem;
-                padding: 1rem 0;
-            }
+    #toggle:checked~.navlist {
+        left: 0;
+    }
+
+    .navlist a {
+        font-size: 1.2rem;
+        padding: 1rem 0;
+    }
 
     .row {
         flex-direction: row;
@@ -1104,17 +1052,17 @@ form .message {
         margin: auto;
     }
 
-    .right-content {
-        max-width: 90vw;
+    .row .right-content {
+        max-width: 100%;
         align-items: center;
-        text-align: left;
+        text-align: center;
     }
 
     .right-content .name {
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-top: 2rem;
         text-align: center;
-        margin-left: 2rem;
+        margin-bottom: 1.2rem;
     }
 
     .right-content span {
@@ -1123,7 +1071,11 @@ form .message {
 
     .right-content p {
         font-size: 1.5rem;
-        /* margin-top: 0.7rem; */
+        max-width: 100%
+            /* margin-top: 0.7rem; */
+    }
+    .right-content .intro{
+        max-width: 100%;
     }
 
     .buttons {
@@ -1134,6 +1086,7 @@ form .message {
         display: inline-block;
     }
 
+
     .btn-1,
     .btn-2 {
         margin: 1rem auto;
@@ -1141,6 +1094,8 @@ form .message {
         font-size: 1rem;
         min-height: 2rem;
     }
+
+    .btn-1 a {}
 
     .right-content .social {
         display: flex;
@@ -1224,5 +1179,27 @@ form .message {
     .quick-lists li,
     .follow-lists li {
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 1085px) {
+    .right-content {
+        display: block;
+        margin: auto;
+        padding: 0 3rem;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1468px) {
+    * {
+        overflow-x: hidden;
+    }
+
+    .row {
+        display: flex;
+        margin: auto;
     }
 }
