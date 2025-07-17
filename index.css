@@ -676,7 +676,7 @@ body {
 }
 
 /* --------------------------lets work together------------------------- */
-.clientform {
+.clientform-section {
     min-height: 46rem;
     /* min-height: 73.6vh; */
     color: white;
@@ -974,6 +974,19 @@ form .message {
     justify-content: center;
 }
 
+@media screen and (max-width: 368px){
+    input[type="text"],
+    .message,
+    .send {
+        width: 70vw;
+        max-width: 100%;
+        margin-right: 1rem;
+    }
+    .clientform form{
+        margin-right: 1rem;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
 
@@ -1162,8 +1175,18 @@ form .message {
 
     .container .mydetails,
     .container .clientform {
-        width: 100%;
+        width: 112%;
         margin: 1rem 0;
+        border: 2px solid yellow;
+    }
+
+    .clientform h2 {
+        margin-left: 1rem;
+        /* text-align: left; */
+        font-size: 1.4rem;
+    }
+    .clientform form{
+        max-width: 100%;
     }
 
     input[type="text"],
@@ -1203,13 +1226,15 @@ form .message {
         margin: auto;
         /* margin-left: 3rem;
         max-width: 13rem; */
-        
+
     }
-    .copyright{
+
+    .copyright {
         font-size: 0.9rem;
     }
-    .email-query span a{
-        font-size: 1.5rem;
+
+    .email-query span a {
+        font-size: 1.3rem;
     }
 }
 
