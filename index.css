@@ -235,7 +235,8 @@ body {
     justify-items: center;
     align-items: center;
     gap: 1rem;
-    max-width: 15rem;
+    /* max-width: 15rem; */
+    max-width: 44%;
     /* max-width: 13.333vw; */
     /* position: relative; */
     top: 0rem;
@@ -1017,7 +1018,7 @@ form .message {
         position: fixed;
         top: 70px;
         left: -100%;
-        width: 100%;
+        width: 50%;
         height: calc(100vh - 70px);
         background: rgba(0, 0, 0, 0.95);
         flex-direction: column;
@@ -1029,6 +1030,7 @@ form .message {
 
     #toggle:checked~.navlist {
         left: 0;
+        z-index: 2;
     }
 
     .navlist a {
@@ -1074,7 +1076,8 @@ form .message {
         max-width: 100%
             /* margin-top: 0.7rem; */
     }
-    .right-content .intro{
+
+    .right-content .intro {
         max-width: 100%;
     }
 
@@ -1098,15 +1101,18 @@ form .message {
     .btn-1 a {}
 
     .right-content .social {
+        gap: 1rem;
         display: flex;
         left: 0;
         justify-content: center;
-        flex-wrap: wrap;
+        flex-direction: row;
+        min-width: 16rem;
+        margin: 0;
     }
 
     .social .icon-box {
-        width: 1rem;
-        height: 1rem;
+        width: 3rem;
+        height: 3rem;
     }
 
     .aboutmeContainer,
@@ -1180,6 +1186,11 @@ form .message {
     .follow-lists li {
         text-align: center;
     }
+    .details .git{
+        max-width: 58%;
+        margin: auto;
+        /* margin-left: 3rem;max-width: 13rem;
+    }
 }
 
 @media screen and (max-width: 1085px) {
@@ -1194,9 +1205,9 @@ form .message {
 
 
 @media screen and (max-width: 1468px) {
-    * {
+    /* * {
         overflow-x: hidden;
-    }
+    } */
 
     .row {
         display: flex;
