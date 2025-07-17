@@ -1203,6 +1203,10 @@ form .message {
         margin: auto;
         /* margin-left: 3rem;
         max-width: 13rem; */
+        
+    }
+    .copyright{
+        font-size: 0.5rem;
     }
 }
 
