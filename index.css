@@ -1208,6 +1208,9 @@ form .message {
     .copyright{
         font-size: 0.9rem;
     }
+    .email-query span a{
+        font-size: 0.9rem;
+    }
 }
 
 @media screen and (max-width: 1085px) {
