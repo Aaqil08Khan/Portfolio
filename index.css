@@ -1178,6 +1178,12 @@ form .message {
         width: 90vw;
         margin: 0;
     }
+    .details h2{
+        font-size: 1.2rem;
+    }
+    .detials p{
+        font-size: 0.5rem;
+    }
 
     .details .tools div {
         width: auto;
