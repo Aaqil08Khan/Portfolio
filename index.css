@@ -19,7 +19,8 @@ header {
 
 /* --------------------------Body-------------------------- */
 body {
-    background: linear-gradient(to bottom right, #0f0e28 46%, #050d0e 89%)
+    background: linear-gradient(to bottom right, #0f0e28 46%, #050d0e 89%);
+
 }
 
 
@@ -131,6 +132,8 @@ body {
     /* width: 25vw; */
     object-fit: fill;
     margin-top: 1rem;
+    border-radius: 1rem;
+    border: 0.5px solid grey;
 }
 
 .row .right-content {
@@ -190,7 +193,7 @@ body {
             rgba(42, 123, 155, 1) 0%,
             rgba(87, 199, 133, 1) 50%,
             rgba(237, 221, 83, 1) 100%);
-    font-size: 1.3rem;
+    font-size: 1rem;
     left: 53rem;
     border: none;
     border-radius: 0.8rem;
@@ -201,8 +204,14 @@ body {
     text-decoration: none;
 }
 
+
 .btn-1:hover {
     transform: scale(1.1);
+    transition: transform 1s ease-in-out;
+}
+
+.btn-1:hover:after {
+    transform: scale(1);
 }
 
 .btn-2 {
@@ -232,7 +241,8 @@ body {
 
 .right-content .social {
     display: flex;
-    justify-items: center;
+    justify-items:
+        center;
     align-items: center;
     gap: 1rem;
     /* max-width: 15rem; */
@@ -267,17 +277,6 @@ body {
     transform: translateY(-5px);
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* --------------------------About me section-------------------------- */
 .aboutme {
     /* use this one the bottom one */
@@ -289,6 +288,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 4rem;
 }
 
 .aboutmeContainer {
@@ -374,6 +374,7 @@ body {
     text-align: center;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 4rem;
     justify-content: center;
 }
 
@@ -385,6 +386,7 @@ body {
     /* max-width: 40.833vw; */
     /* margin: 2rem; */
     padding: 0.5rem;
+    max-width: 100%;
 }
 
 .myrecentwork {
@@ -428,6 +430,9 @@ body {
     /* min-height: 40vh; */
     margin: 1rem 5rem;
     justify-items: center;
+}
+@media screen {
+    
 }
 
 .container .card {
@@ -482,10 +487,11 @@ body {
     font-size: 1.5rem;
     color: cornflowerblue;
     margin: 0.5rem;
+    margin-top: 1rem;
 }
 
 .details p {
-    margin: 0.4rem;
+    margin: 0.5rem;
 }
 
 .details .projectdetails {
@@ -564,6 +570,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 4rem;
 }
 
 .techskillscontainer {
@@ -574,6 +581,7 @@ body {
     /* max-width: 40.833vw; */
     /* margin: 2rem; */
     padding: 0.5rem;
+    max-width: 100%;
 }
 
 .myskills {
@@ -673,6 +681,7 @@ body {
 .grid .tool .toolname {
     font-size: 1rem;
     margin-top: 1rem;
+    text-align: center;
 }
 
 /* --------------------------lets work together------------------------- */
@@ -1021,7 +1030,7 @@ form .message {
     }
 
     .name-logo {
-        font-size: 30px;
+        font-size: 2rem;
         /* padding-left: 190px; */
         margin: auto;
     }
@@ -1045,12 +1054,13 @@ form .message {
         left: -100%;
         width: 50%;
         height: calc(100vh - 70px);
-        background: rgba(0, 0, 0, 0.95);
+        background: rgb(0 0 0);
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         padding-top: 2rem;
-        transition: left 0.3s ease;
+        transition: left 0.5s ease-in-out;
+        border: 1px solid gray;
     }
 
     #toggle:checked~.navlist {
@@ -1069,6 +1079,8 @@ form .message {
         padding: 0rem;
         display: block;
         justify-content: center;
+        position: relative;
+        top: 6rem;
     }
 
 
@@ -1086,14 +1098,14 @@ form .message {
     }
 
     .right-content .name {
-        font-size: 1.5rem;
+        font-size: 1rem;
         margin-top: 2rem;
         text-align: center;
         margin-bottom: 1.2rem;
     }
 
     .right-content span {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .right-content p {
@@ -1103,7 +1115,8 @@ form .message {
     }
 
     .right-content .intro {
-        max-width: 100%;
+        font-size: 1rem;
+        margin-top: 1rem;
     }
 
     .buttons {
@@ -1182,7 +1195,7 @@ form .message {
     .container .clientform {
         width: 112%;
         margin: 1rem 0;
-        border: 2px solid yellow;
+        /* border: 2px solid yellow; */
     }
 
     .clientform h2 {
@@ -1242,9 +1255,22 @@ form .message {
     .email-query span a {
         font-size: 1.3rem;
     }
+
+    .container .card {
+        max-width: 100%;
+    }
+
+    .details .tools {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 1085px) {
+    html {
+        max-width: 100%;
+    }
+
     .right-content {
         display: block;
         margin: auto;
@@ -1260,12 +1286,15 @@ form .message {
     /* * {
         overflow-x: hidden;
     } */
-    html {
-        max-width: 100%;
-    }
+   
 
     .row {
         display: flex;
         margin: auto;
+    }
+    .cotainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
     }
 }
