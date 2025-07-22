@@ -37,18 +37,38 @@ body {
 }
 
 /* Hamburger Menu */
-.hamburger {
+.hamburger-icon {
     display: none;
     flex-direction: column;
     cursor: pointer;
 }
 
-.hamburger span {
+.hamburger-icon span {
     width: 25px;
     height: 3px;
     background: white;
     margin: 3px 0;
     transition: 0.3s;
+}
+
+.hamburger-icon {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .hamburger-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hamburger-icon {
+    width: 16px;
+    height: 44px;
+  }
 }
 
 #toggle {
@@ -1057,7 +1077,7 @@ form .message {
     }
 
     .name-logo {
-        font-size: 2rem;
+        font-size: 1rem;
         /* padding-left: 190px; */
         margin: auto;
     }
@@ -1069,7 +1089,7 @@ form .message {
         display: none;
     }
 
-    .hamburger {
+    .hamburger-icon {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1086,8 +1106,8 @@ form .message {
         justify-content: flex-start;
         align-items: center;
         padding-top: 2rem;
-        transition: left 0.5s ease-in-out;
-        border: 1px solid gray;
+        transition: left 0.5s ease-in-out; 
+        box-shadow: 3px 3px 10px rgb(74 74 79);
     }
 
     #toggle:checked~.navlist {
