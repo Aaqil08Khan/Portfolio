@@ -59,15 +59,15 @@ body {
 
 @media (max-width: 768px) {
   .hamburger-icon {
-    width: 18px;
-    height: 18px;
+    width: 46px;
+    height: 44px;
   }
 }
 
 @media (max-width: 480px) {
   .hamburger-icon {
-    width: 46px;
-    height: 44px;
+    width: 23px;
+    height: 22px;
   }
 }
 
@@ -192,15 +192,9 @@ body {
 
 .buttons {
     width: 100%;
-    min-height: 8rem;
-    /*min height not working here*/
-    display: flex;
-    /* gap: 2rem; */
-    flex-direction: row;
-    position: relative;
-    top: 0rem;
-    /* left: -20rem; */
-    right: 2rem;
+    min-height: 4rem;
+    display: flex; 
+    flex-direction: row; 
 }
 
 .btn-1 {
@@ -260,12 +254,10 @@ body {
 }
 .social {
     display: flex;
-    gap: 1rem; 
-    padding: 1rem;
-    /* position: absolute;
-    top: 41rem;
-    left: 17rem; */
-    margin: auto;
+    gap: 1rem;
+    padding: 1rem; 
+    width: 100%;
+    justify-content: center;
   }
 
   .icon-box {
@@ -1062,8 +1054,7 @@ form .message {
 /* ---------------------------Navbar area------------------------ */
     .navbar {
         flex-direction: row;
-        align-items: center;
-        padding: 1rem;
+        align-items: center; 
         display: flex;
         position: fixed;
         width: 100%;
