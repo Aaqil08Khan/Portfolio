@@ -240,11 +240,11 @@ body {
     margin: 4rem auto 2rem 0;
     padding: 0.5em;
     cursor: pointer;
-    background: transparent;
-    /* background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%); */
-    font-size: 1.3rem;
+    background: #000000;
+    /* background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%); */
+    font-size: 1.1rem;
     left: 65rem;
-    /* border: 1px solid white; */
+    border: 1px solid white;
     border-radius: 0.8rem;
     color: white;
 }
@@ -258,44 +258,38 @@ body {
 .btn-2:hover {
     transform: scale(1.1);
 }
-
-.right-content .social {
+.social {
     display: flex;
-    justify-items:
-        center;
-    align-items: center;
-    gap: 1rem;
-    /* max-width: 15rem; */
-    max-width: 44%;
-    /* max-width: 13.333vw; */
-    /* position: relative; */
-    top: 0rem;
-    left: 10rem;
-    /* margin-bottom: -13rem; */
-    opacity: 0.7;
+    gap: 1rem; 
+    padding: 1rem;
+    /* position: absolute;
+    top: 41rem;
+    left: 17rem; */
     margin: auto;
-}
+  }
 
-.social .icon-box {
-    background-color: white;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 10px;
+  .icon-box {
+    background-color: #cbd5e1; /* Tailwind gray-300 */
+    padding: 12px;
+    border-radius: 12px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-}
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    transition: background 0.3s;
+  }
 
-.social .icon-box i {
-    font-size: 24px;
-    color: #444;
-}
+  .icon-box i {
+    color: #0f172a; /* Almost black text */
+    font-size: 20px;
+  }
 
-.social .icon-box:hover {
-    transform: translateY(-5px);
-}
+  .icon-box:hover {
+    background-color: #94a3b8; /* Hover shade */
+  }
+
+
 
 /* --------------------------About me section-------------------------- */
 .aboutme {
@@ -1152,7 +1146,7 @@ form .message {
     }
 
     .right-content span {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .right-content p {
