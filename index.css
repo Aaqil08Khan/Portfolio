@@ -1319,7 +1319,7 @@ form .message {
 
     /* --------------------------------my recent work section--------------- */
     .recentworkcontainer h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .recentworkcontainer .container {
@@ -1344,7 +1344,7 @@ form .message {
 
     /* -----------------------------Technologies and expertise area---------------- */
     .techskillscontainer h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
      .techskillscontainer .container {
@@ -1376,7 +1376,7 @@ form .message {
 
     /* ---------------------------------Get in touch------------------------- */
     .clientformcontainer h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .clientformcontainer .container {
