@@ -488,8 +488,8 @@ body {
 
 .recentworkcontainer .container-recent-work {
     position: relative;
-    display: flex;
-    /* grid-template-columns: 1fr 1fr 1fr; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 3rem;
     /* border: 4px solid hotpink; */
     /* width: 1459px; */
@@ -498,15 +498,13 @@ body {
     /* min-height: 40vh; */
     margin: 1rem 5rem;
     justify-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
 } 
 
 .container-recent-work .card {
     /* border: 3px solid blue; */
     overflow: hidden;
     display: flex;
-    max-width: 50%;
+    /* max-width: 79%; */
     /* max-width: 41.146vw; */
     /* min-height: 24rem; */
     /* min-height: 38.4vh; */
@@ -723,7 +721,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
     /* border: 4px solid hotpink; */
-    width: 1459px;
+    width: 100vw;
     /* width: 75.99vw; */
     min-height: 25rem;
     /* min-height: 40vh; */
@@ -895,7 +893,7 @@ body {
     position: relative;
     display: flex;
     /* border: 4px solid hotpink; */
-    width: 1459px;
+    width: 100vw;
     /* width: 75.99vw; */
     min-height: 25rem;
     /* min-height: 40vh; */
@@ -1395,13 +1393,13 @@ form .message {
     margin-bottom: 1rem;
   }
 
-  .container-recent-work {
+  .recentworkcontainer .container-recent-work{
     grid-template-columns: 1fr ;
     margin: 0.5rem;
     gap: 1rem;
   }
 
-  .container-recent-work .card {
+    .recentworkcontainer .container-recent-work .card {
     width: 100%;
     border-radius: 8px;
   }
