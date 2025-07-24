@@ -27,7 +27,7 @@
     --color-bg-start: #1E293B;
     --color-bg-end: #0F172A;
     --color-navbar1: #1C2A3A;
-    --color-navbar2: rgba(59, 130, 246, 0.1);
+    --color-navbar2: rgb(59 130 246);
     --color-shadow:rgba(110, 231, 183, 0.2);
 }
 
@@ -486,7 +486,7 @@ body {
      box-shadow: 0 2px 6px var(--color-shadow);
 }
 
-.recentworkcontainer .container {
+.recentworkcontainer .container-recent-work {
     position: relative;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -501,13 +501,13 @@ body {
 }
 
 @media (min-width: 1024px) {
-    .recentworkcontainer .container {
+    .recentworkcontainer .container-recent-work {
         /* max-width: 1024px; */
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
-.container .card {
+.container-recent-work .card {
     /* border: 3px solid blue; */
     overflow: hidden;
     display: flex;
@@ -664,6 +664,7 @@ body {
   color: var(--color-bg-start); 
 }
 
+
 /* --------------------------Technologies and experties-------------------------- */
 .techskills {
     min-height: 46rem;
@@ -721,7 +722,7 @@ body {
     box-shadow: 0 2px 6px var(--color-shadow);
 }
 
-.techskillscontainer .container {
+.techskillscontainer .container-techskills {
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -736,7 +737,7 @@ body {
 }
 
 @media (max-width: 627px) {
-    .techskillscontainer .container {
+    .techskillscontainer .container-techskills {
         grid-template-columns: 1fr;
         width: 90vw;
         margin: 0;
@@ -895,7 +896,7 @@ body {
      box-shadow: 0 2px 6px var(--color-shadow);
 }
 
-.clientformcontainer .container {
+.clientformcontainer .container-getintouch {
     position: relative;
     display: flex;
     /* border: 4px solid hotpink; */
@@ -908,7 +909,7 @@ body {
     justify-content: center;
 }
 
-.container .mydetails {
+.container-getintouch .mydetails {
     background-color: var(--color-bg-end);        
     border: 1px solid var(--color-secondary);
     width: 45%;
@@ -955,7 +956,7 @@ body {
     color: #6EE7B7; 
 }
 
-.container .clientform {
+.container-getintouch .clientform {
     /* background-color: #192929;
     border: 1px solid #505c5c; */
     background-color: rgba(15, 23, 42, 0.8);  
@@ -1193,6 +1194,8 @@ form .message {
 
     body {
         background: #0f0e28;
+        margin: 0;
+        padding: 0;
         /* keep background consistent */
     }
 
@@ -1349,11 +1352,12 @@ form .message {
     .techskillscontainer .line1,
     .clientformcontainer .line1 {
         width: 25vw;
-        margin-bottom: 0;
+        margin-bottom: 2rem;
     }
 
     .containertag {
         font-size: 0.8rem;
+        margin-bottom: 0.5rem;
     }
 
     /* ----------------------------About me section------------------------- */
@@ -1386,16 +1390,32 @@ form .message {
     /* --------------------------------my recent work section--------------- */
     .recentworkcontainer h1 {
         font-size: 1.5rem;
+        margin-bottom: 0.5rem;
     }
 
-    .recentworkcontainer .container {
+    /* .recentworkcontainer .container-recent-work {
         grid-template-columns: 1fr 1fr;
-        width: 90vw;
+        width: 100vw;
         margin: 0;
+        border: 2px solid green;
     }
+    .container-recent-work{
+        grid-template-columns: 1fr;
+    } */
 
     .detials p {
         font-size: 0.5rem;
+    }
+        /* .container-recent-work .card {
+        /* max-width: 100%; */
+        border: 2px solid red;
+        width: 17rem;
+    } */
+    
+
+    .details .tools {
+        display: flex;
+        justify-content: center;
     }
 
     .details .tools div {
@@ -1403,25 +1423,25 @@ form .message {
         padding: 0.5rem 1rem;
     }
 
-    .recentworkcontainer .container {
+    /* .recentworkcontainer .container-recent-work {
         /* max-width: 1024px; */
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
+        /* grid-template-columns: repeat(1, minmax(0, 1fr)); */
+    } */
 
     /* -----------------------------Technologies and expertise area---------------- */
     .techskillscontainer h1 {
         font-size: 1.5rem;
     }
 
-    .techskillscontainer .container {
+    .techskillscontainer .container-techskills {
         grid-template-columns: 1fr;
         width: 90vw;
         margin: 0;
     }
 
     .techskillscontainer .skillcard {
-        padding: 0.5rem;
-        min-height: 14rem;
+        /* padding: 0.5rem; */
+        min-height: 12rem;
     }
 
     .skillcard .grid {
@@ -1434,8 +1454,8 @@ form .message {
     }
 
     /* ----------------------------------general styling-------------------- */
-    .container .mydetails,
-    .container .clientform {
+    .container-getintouch .mydetails,
+    .container-getintouch .clientform {
         width: 112%;
         margin: 1rem 0;
         /* border: 2px solid yellow; */
@@ -1446,11 +1466,12 @@ form .message {
         font-size: 1.5rem;
     }
 
-    .clientformcontainer .container {
+    .clientformcontainer .container-getintouch {
         flex-direction: column;
         align-items: center;
         width: 90vw;
-        padding: 1rem;
+        /* padding: 1rem; */
+        margin: 0;
     }
 
     .clientform h2 {
@@ -1497,11 +1518,8 @@ form .message {
     }
 
     .details .git {
-        max-width: 58%;
-        margin: auto;
-        /* margin-left: 3rem;
-        max-width: 13rem; */
-
+        max-width: 100%;
+        /* border: 2px solid red; */
     }
 
     .copyright {
@@ -1512,14 +1530,7 @@ form .message {
         font-size: 1.3rem;
     }
 
-    .container .card {
-        max-width: 100%;
-    }
 
-    .details .tools {
-        display: flex;
-        justify-content: center;
-    }
 }
 
 @media screen and (max-width: 1085px) {
@@ -1555,3 +1566,83 @@ form .message {
         gap: 2rem;
     }
 }
+
+@media (max-width: 480px) {
+  /* .recentworkcontainer .container-recent-work {
+    grid-template-columns: 1fr;
+    margin: 1rem 1rem;
+    gap: 2rem;
+  }
+
+  .container-recent-work .card {
+    width: 100%;
+  } */
+
+  .card .img {
+    min-height: 10rem;
+  }
+
+  .details h2 {
+    font-size: 1.25rem;
+  }
+
+  .details p {
+    font-size: 0.875rem;
+  }
+
+  .details .git {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+/* .recentworkcontainer .container-recent-work {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 3rem;
+  margin: 1rem 5rem;
+  justify-items: center;
+} */
+
+/* Tablet breakpoint: 2 columns*/
+/* @media (max-width: 1024px) {
+    .recentworkcontainer{
+                max-width: 90vw;
+        margin-top: 5rem;
+    }
+
+  .recentworkcontainer .container-recent-work {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 1rem 2rem;
+    gap: 2rem;
+  }
+}  */
+
+/* Mobile breakpoint: 1 column */
+ /* @media (max-width: 640px) {
+  .recentworkcontainer .container-recent-work {
+    grid-template-columns: 1fr;
+    margin: 1rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .container-recent-work .card {
+    width: 100%;
+    height: 20rem;
+  }
+}   */
+
+/* Media query for responsive adjustments */
+/* @media (min-width: 768px) {
+  .card {
+    width: calc(50% - 1rem); /* 2 cards per row */
+  }
+}
+
+/* @media (min-width: 1024px) {
+  .card {
+    width: calc(33.33% - 1rem); /* 3 cards per row */
+  }
+} */ */
